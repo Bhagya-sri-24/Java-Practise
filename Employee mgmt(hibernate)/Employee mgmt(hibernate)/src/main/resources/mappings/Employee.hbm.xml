@@ -1,0 +1,16 @@
+<!DOCTYPE hibernate-mapping PUBLIC
+  "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+  "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.example.entity">
+  <class name="Employee" table="employees">
+    <id name="id" column="id">
+      <generator class="identity"/>
+    </id>
+    <property name="firstName"  column="first_name" not-null="true" length="100"/>
+    <property name="lastName"   column="last_name"  not-null="true" length="100"/>
+    <property name="email"      column="email" unique="true" length="150"/>
+    <property name="salary"     column="salary"/>
+    <property name="department" column="department" length="100"/>
+  </class>
+</hibernate-mapping>
